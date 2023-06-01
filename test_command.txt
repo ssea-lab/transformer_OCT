@@ -1,0 +1,53 @@
+# test command
+
+### MAE finetune model test command [vit_base_patch16]
+python test.py --model_name=vit_base_patch16 --test_mode=fine_tune --augmentation=mae_fine_tune_train --image_size=224
+python test.py --model_name=vit_base_patch16 --test_mode=fine_tune --augmentation=mae_fine_tune_train --image_size=326
+python test.py --model_name=vit_base_patch16 --test_mode=fine_tune --augmentation=mae_fine_tune_train --image_size=512
+
+### MAE ensemble post cross attention model finetune test command [vit_base_patch16]
+python test.py ----test_mode=fine_tune --augmentation=mae_fine_tune_train --batch_size=32 --model_name=vit_base_patch16_ensemble_post_cross_attention --image_size=224 --patch_size=16 --ensemble --cross_attention
+# using label smoothing，mixup and model_ema for training
+python test.py ----test_mode=fine_tune --augmentation=mae_fine_tune_train --batch_size=32 --model_name=vit_base_patch16_ensemble_post_cross_attention --image_size=224 --patch_size=16 --ensemble --cross_attention
+python test.py ----test_mode=fine_tune --augmentation=mae_fine_tune_train --batch_size=32 --model_name=vit_base_patch16_ensemble_post_cross_attention --image_size=224 --patch_size=16 --ensemble --cross_attention --use_model_ema
+
+## test_kind = patch_test
+### MAE finetune model test command [vit_base_patch16]
+python test.py --model_name=vit_base_patch16 --test_mode=fine_tune --augmentation=mae_fine_tune_train --image_size=224 --test_kind=patch_test
+python test.py --model_name=vit_base_patch16 --test_mode=fine_tune --augmentation=mae_fine_tune_train --image_size=326 --test_kind=patch_test
+python test.py --model_name=vit_base_patch16 --test_mode=fine_tune --augmentation=mae_fine_tune_train --image_size=512 --test_kind=patch_test
+### MAE ensemble post cross attention model finetune test command [vit_base_patch16]
+python test.py ----test_mode=fine_tune --augmentation=mae_fine_tune_train --batch_size=32 --model_name=vit_base_patch16_ensemble_post_cross_attention --image_size=224 --patch_size=16 --ensemble --cross_attention --test_kind=patch_test
+# using label smoothing，mixup and model_ema for training
+python test.py ----test_mode=fine_tune --augmentation=mae_fine_tune_train --batch_size=32 --model_name=vit_base_patch16_ensemble_post_cross_attention --image_size=224 --patch_size=16 --ensemble --cross_attention --test_kind=patch_test
+python test.py ----test_mode=fine_tune --augmentation=mae_fine_tune_train --batch_size=32 --model_name=vit_base_patch16_ensemble_post_cross_attention --image_size=224 --patch_size=16 --ensemble --cross_attention --use_model_ema --test_kind=patch_test
+
+
+
+## test_kind = tiff_refine3_test, tiff_file=dataset/tiff_refine3.txt
+### MAE finetune model test command [vit_base_patch16]
+python test.py --model_name=vit_base_patch16 --test_mode=fine_tune --augmentation=mae_fine_tune_train --image_size=224 --test_kind=tiff_refine3_test --tiff_file=dataset/tiff_refine3.txt
+python test.py --model_name=vit_base_patch16 --test_mode=fine_tune --augmentation=mae_fine_tune_train --image_size=326 --test_kind=tiff_refine3_test --tiff_file=dataset/tiff_refine3.txt
+python test.py --model_name=vit_base_patch16 --test_mode=fine_tune --augmentation=mae_fine_tune_train --image_size=512 --test_kind=tiff_refine3_test --tiff_file=dataset/tiff_refine3.txt
+### MAE ensemble model finetune test command [vit_base_patch16]
+python test.py ----test_mode=fine_tune --augmentation=mae_fine_tune_train --batch_size=1 --model_name=vit_base_patch16_ensemble_post_cross_attention --image_size=224 --patch_size=16 --ensemble --cross_attention --test_kind=tiff_refine3_test --tiff_file=dataset/tiff_refine3.txt
+
+
+## test_kind = tiff_xiangya_test, tiff_file=dataset/tiff_xiangya.txt
+### MAE finetune model test command [vit_base_patch16]
+python test.py --model_name=vit_base_patch16 --test_mode=fine_tune --augmentation=mae_fine_tune_train --image_size=224 --test_kind=tiff_xiangya_test --tiff_file=dataset/tiff_xiangya.txt
+python test.py --model_name=vit_base_patch16 --test_mode=fine_tune --augmentation=mae_fine_tune_train --image_size=326 --test_kind=tiff_xiangya_test --tiff_file=dataset/tiff_xiangya.txt
+python test.py --model_name=vit_base_patch16 --test_mode=fine_tune --augmentation=mae_fine_tune_train --image_size=512 --test_kind=tiff_xiangya_test --tiff_file=dataset/tiff_xiangya.txt
+### MAE ensemble model finetune test command [vit_base_patch16]
+python test.py ----test_mode=fine_tune --augmentation=mae_fine_tune_train --batch_size=1 --model_name=vit_base_patch16_ensemble_post_cross_attention --image_size=224 --patch_size=16 --ensemble --cross_attention  --test_kind = tiff_xiangya_test --tiff_file=dataset/tiff_xiangya.txt
+
+## test_kind = tiff_huaxi_test, tiff_file=dataset/tiff_huaxi.txt
+### MAE finetune model test command [vit_base_patch16]
+python test.py --model_name=vit_base_patch16 --test_mode=fine_tune --augmentation=mae_fine_tune_train --image_size=326 --test_kind=tiff_huaxi_test --tiff_file=dataset/tiff_huaxi.txt
+
+
+
+## test_kind = patch_test_expert
+python test.py --test_kind=patch_test_expert
+## test_kind = tiff_xiangya_expert
+python test.py --test_kind=tiff_xiangya_expert
