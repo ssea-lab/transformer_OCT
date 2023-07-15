@@ -13,4 +13,5 @@ The train commands are in the train_command.txt,  The test commands are in the t
 
 ## Citation
 If you think that our method and code are useful for your work, please help cite the following paper.
+
 Qingbin Wang, Kaiyi Chen, Wanrong Dou, and Yutao Ma. [Cross-Attention Based Multi-Resolution Feature Fusion Model for Self-Supervised Cervical OCT Image Classification](https://doi.org/10.1109/TCBB.2023.3246979). _IEEE/ACM Transactions on Computational Biology and Bioinformatics_, DOI: 10.1109/TCBB.2023.3246979, 2023.
